@@ -1,12 +1,10 @@
 { pkgs, ... }: {
   wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.systemd.variables = ["--all"];
+  wayland.windowManager.hyprland.systemd.variables = [ "--all" ];
 
   xdg.portal = {
     enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-    ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
   xdg.portal.config.common.default = "*";
 
@@ -17,9 +15,7 @@
     "$menu" = "wofi --show run";
     "$fileManager" = "nemo";
 
-    "windowrulev2" = [
-      "suppressevent maximize, class:.*"
-    ];
+    "windowrulev2" = [ "suppressevent maximize, class:.*" ];
   };
 
   wayland.windowManager.hyprland.settings.general = {

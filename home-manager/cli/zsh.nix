@@ -7,12 +7,11 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = ["git"];
+      plugins = [ "git" ];
       theme = "robbyrussell";
     };
 
-    shellAliases = let
-        flakePath = "~/nix";
+    shellAliases = let flakePath = "~/nix";
     in {
       cd = "z";
       rebuild = "sudo nixos-rebuild switch --flake ${flakePath}";

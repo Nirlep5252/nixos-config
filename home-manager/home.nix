@@ -16,11 +16,7 @@
     };
   };
 
-  imports = [
-    ./pkgs.nix
-    ./cli/_import.nix
-    ./apps/_import.nix
-  ];
+  imports = [ ./pkgs.nix ./cli/_import.nix ./apps/_import.nix ];
   programs.firefox.enable = true;
 
   xdg.mimeApps.enable = true;
@@ -35,9 +31,12 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".icons/whitesur".source = "${pkgs.whitesur-cursors}/share/icons/WhiteSur-cursors";
-    ".icons/rose-pine".source = "${pkgs.rose-pine-cursor}/share/icons/BreezeX-RosePine-Linux";
-    ".icons/rose-pine-dawn".source = "${pkgs.rose-pine-cursor}/share/icons/BreezeX-RosePineDawn-Linux";
+    ".icons/whitesur".source =
+      "${pkgs.whitesur-cursors}/share/icons/WhiteSur-cursors";
+    ".icons/rose-pine".source =
+      "${pkgs.rose-pine-cursor}/share/icons/BreezeX-RosePine-Linux";
+    ".icons/rose-pine-dawn".source =
+      "${pkgs.rose-pine-cursor}/share/icons/BreezeX-RosePineDawn-Linux";
   };
 
   home.sessionVariables = {
@@ -50,9 +49,7 @@
     # PRISMA_SCHEMA_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/schema-engine";
   };
 
-  home.sessionPath = [
-    "$HOME/.local/bin"
-  ];
+  home.sessionPath = [ "$HOME/.local/bin" ];
 
   xsession.enable = true;
   xsession.numlock.enable = true;
@@ -76,9 +73,7 @@
 
   # programs.dconf.enable = true;
   dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-schema = "prefer-dark";
-    };
+    "org/gnome/desktop/interface" = { color-schema = "prefer-dark"; };
   };
 
   # Let Home Manager install and manage itself.

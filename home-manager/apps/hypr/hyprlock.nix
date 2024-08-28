@@ -2,8 +2,7 @@
   programs.hyprlock.enable = true;
   programs.hyprlock.settings = {
     "$monitor" = "";
-    general = {
-    };
+    general = { };
 
     background = {
       monitor = "$monitor";
@@ -24,7 +23,8 @@
       inner_color = "rgba(255, 255, 255, 0.2)";
       font_color = "rgb(ffffff)";
       fade_on_empty = false;
-      placeholder_text = "<i><span style=\"italic\" color=\"##cdd6f4\"></span></i>";
+      placeholder_text =
+        ''<i><span style="italic" color="##cdd6f4"></span></i>'';
       hide_input = false;
       rounding = -1;
       fail_color = "rgb(204, 34, 34)";
@@ -40,7 +40,7 @@
       # Date
       {
         monitor = "$monitor";
-        text = "cmd[update:1000] echo \"$(date +\"%A, %B %d\")\"";
+        text = ''cmd[update:1000] echo "$(date +"%A, %B %d")"'';
         color = "rgba(242, 243, 244, 0.75)";
         font_size = 22;
         font_family = "Geist Mono Nerd Font";
@@ -52,7 +52,7 @@
       # Time
       {
         monitor = "$monitor";
-        text = "cmd[update:1000] echo \"$(date +\"%-I:%M\")\"";
+        text = ''cmd[update:1000] echo "$(date +"%-I:%M")"'';
         color = "rgba(242, 243, 244, 0.75)";
         font_size = 95;
         font_family = "Geist Mono Nerd Font";
@@ -63,15 +63,15 @@
 
       # Formality
       # {
-        # monitor = "$monitor";
-        # text = "Life is all about <i>Formality</i>...";
-        # color = "rgba(200, 200, 200, 1.0)";
-        # font_size = 25;
-        # font_family = "GeistMono Nerd Font";
+      # monitor = "$monitor";
+      # text = "Life is all about <i>Formality</i>...";
+      # color = "rgba(200, 200, 200, 1.0)";
+      # font_size = 25;
+      # font_family = "GeistMono Nerd Font";
 
-        # position = "0, 80";
-        # halign = "center";
-        # valign = "center";
+      # position = "0, 80";
+      # halign = "center";
+      # valign = "center";
       # }
 
       # User

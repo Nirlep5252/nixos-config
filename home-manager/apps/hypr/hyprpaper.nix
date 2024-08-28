@@ -10,8 +10,6 @@
       "~/Pictures/Wallpapers/nezuko-kamado-4k.jpg"
     ];
 
-    wallpaper = [
-      ",~/Pictures/Wallpapers/nezuko-kamado-4k.jpg"
-    ];
+    wallpaper = [ ",~/Pictures/Wallpapers/nezuko-kamado-4k.jpg" ];
   };
 }
