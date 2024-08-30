@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ pkgs, lib, inputs, config, ... }:
 
 {
   imports = [ ./hardware-configuration.nix ./modules/_import.nix ];
@@ -38,6 +38,8 @@
 
   # Configure keymap in X11
   programs.hyprland.enable = true;
+  programs.hyprland.package =
+    inputs.hyprland.packages."${pkgs.system}".hyprland;
   services.xserver.enable = true;
   services.xserver.windowManager.i3.enable = true;
   services.xserver.displayManager.gdm.enable = true;

@@ -26,6 +26,6 @@
     "col.active_border" = "0xffffffff";
     "col.inactive_border" = "rgba(00000000)";
 
-    layout = "dwindle";
+    layout = "hy3"; # REQUIRES hy3 PLUGIN
   };
 }

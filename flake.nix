@@ -6,18 +6,23 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
   };
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, ... }@inputs:
     let system = "x86_64-linux";
     in {
       nixosConfigurations.uwu = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ ./nixos/configuration.nix ];
+        specialArgs = { inherit inputs; };
       };
       homeConfigurations.nirlep5252 =
         home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.${system};
           modules = [ ./home-manager/home.nix ];
+          extraSpecialArgs = {
+            inherit inputs;
+          };
         };
     };
 }

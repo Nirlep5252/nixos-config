@@ -5,7 +5,7 @@
     "wl-paste --type image --watch cliphist store"
     "nm-applet"
     "blueman-applet"
-    "hyprpm reload -n"
+    # "hyprpm reload -n"
     "lxpolkit"
     "waybar"
   ];
