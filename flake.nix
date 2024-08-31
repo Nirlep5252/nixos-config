@@ -7,6 +7,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
   outputs = { nixpkgs, home-manager, ... }@inputs:
     let system = "x86_64-linux";
@@ -20,9 +21,7 @@
         home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.${system};
           modules = [ ./home-manager/home.nix ];
-          extraSpecialArgs = {
-            inherit inputs;
-          };
+          extraSpecialArgs = { inherit inputs; };
         };
     };
 }

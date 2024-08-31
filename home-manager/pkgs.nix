@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   home.packages = [
@@ -11,10 +11,13 @@
     pkgs.wofi
     pkgs.rofi-wayland
 
+    inputs.zen-browser.packages."${pkgs.system}".specific
+
     pkgs.spotify
     pkgs.discord
     pkgs.yt-dlp
 
+    pkgs.exercism
     pkgs.nixfmt-classic
     pkgs.pfetch-rs
     pkgs.ungoogled-chromium
