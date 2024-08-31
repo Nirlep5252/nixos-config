@@ -11,6 +11,10 @@
     pkgs.wofi
     pkgs.rofi-wayland
 
+    pkgs.spotify
+    pkgs.discord
+    pkgs.yt-dlp
+
     pkgs.nixfmt-classic
     pkgs.pfetch-rs
     pkgs.ungoogled-chromium
