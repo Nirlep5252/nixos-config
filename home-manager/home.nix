@@ -33,10 +33,6 @@
   home.file = {
     ".icons/whitesur".source =
       "${pkgs.whitesur-cursors}/share/icons/WhiteSur-cursors";
-    ".icons/rose-pine".source =
-      "${pkgs.rose-pine-cursor}/share/icons/BreezeX-RosePine-Linux";
-    ".icons/rose-pine-dawn".source =
-      "${pkgs.rose-pine-cursor}/share/icons/BreezeX-RosePineDawn-Linux";
   };
 
   home.sessionVariables = {
@@ -57,8 +53,8 @@
 
   gtk.enable = true;
 
-  gtk.cursorTheme.package = pkgs.whitesur-cursors;
-  gtk.cursorTheme.name = "rose-pine";
+  gtk.cursorTheme.package = pkgs.apple-cursor;
+  gtk.cursorTheme.name = "macOS-BigSur";
 
   gtk.theme.package = pkgs.gnome-themes-extra;
   gtk.theme.name = "Adwaita-dark";

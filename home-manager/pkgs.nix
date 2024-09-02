@@ -52,6 +52,7 @@
     pkgs.openssl
     pkgs.nemo
     pkgs.whitesur-cursors
+    pkgs.apple-cursor
     pkgs.luajitPackages.luarocks
     pkgs.tesseract
     pkgs.sway-contrib.grimshot
