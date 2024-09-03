@@ -6,6 +6,7 @@
     pkgs.vscode
     pkgs.neovim
     pkgs.neovide
+    pkgs.lunarvim
 
     # menus
     pkgs.wofi
@@ -17,6 +18,9 @@
     pkgs.discord
     pkgs.yt-dlp
 
+    pkgs.lazygit
+    pkgs.nodejs_22
+    pkgs.btop
     pkgs.exercism
     pkgs.nixfmt-classic
     pkgs.pfetch-rs
@@ -81,11 +85,7 @@
     pkgs.lld
     pkgs.cppcheck
 
-    pkgs.cargo
-    pkgs.rustc
-    pkgs.rust-analyzer
-    pkgs.rustfmt
-    pkgs.clippy
+    pkgs.rustup
 
     pkgs.flyctl
     pkgs.dust
