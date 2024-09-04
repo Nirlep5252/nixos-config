@@ -20,6 +20,7 @@
     pkgs.yt-dlp
 
     pkgs.lazygit
+    pkgs.lazydocker
     pkgs.nodejs_22
     pkgs.btop
     pkgs.exercism
