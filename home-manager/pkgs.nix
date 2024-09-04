@@ -1,10 +1,11 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, system, ... }:
 
 {
   home.packages = [
     # code editors
     pkgs.vscode
-    pkgs.neovim
+    # pkgs.neovim
+    inputs.nixvim.packages."${system}".default
     pkgs.neovide
     pkgs.lunarvim
 
@@ -67,7 +68,7 @@
     pkgs.geist-font
     pkgs.ripgrep
     pkgs.dig
-    pkgs.ciscoPacketTracer8
+    # pkgs.ciscoPacketTracer8
     pkgs.dooit
     pkgs.gtk2
     pkgs.brave
