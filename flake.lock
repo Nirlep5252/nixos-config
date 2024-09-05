@@ -498,15 +498,15 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1724285379,
-        "narHash": "sha256-0Y1R057Z43M8cwf2nnzA759Oq7SwktgfC9NiQKYZIcs=",
-        "owner": "redyf",
+        "lastModified": 1725535447,
+        "narHash": "sha256-uyYteL9j6P6eBQO/zyYDzEKYA4OrYqXs8vuHtbziDK8=",
+        "owner": "Nirlep5252",
         "repo": "Neve",
-        "rev": "1038e7aa676dc11e756f2c6227082fab7fc32945",
+        "rev": "4ebd9d4a4d08efa9abe8db68949bc5c028b5a6b1",
         "type": "github"
       },
       "original": {
-        "owner": "redyf",
+        "owner": "Nirlep5252",
         "repo": "Neve",
         "type": "github"
       }
