@@ -17,6 +17,7 @@
       rebuild = "sudo nixos-rebuild switch --flake ${flakePath}";
       hms = "home-manager switch --flake ${flakePath}";
       n = "nvim";
+      myeyes = "gammastep -l 0:0 -o -t 6500:6500 -b";
     };
 
     initExtra = ''

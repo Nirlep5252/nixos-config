@@ -19,8 +19,11 @@
     pkgs.discord
     pkgs.yt-dlp
 
+    pkgs.gammastep
     pkgs.lazygit
     pkgs.lazydocker
+    pkgs.redisinsight
+    pkgs.grpcui
     pkgs.nodejs_22
     pkgs.btop
     pkgs.exercism

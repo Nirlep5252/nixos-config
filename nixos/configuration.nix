@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, lib, inputs, config, ... }:
+{ pkgs, inputs, config, ... }:
 
 {
   imports = [ ./hardware-configuration.nix ./modules/_import.nix ];
@@ -41,10 +41,20 @@
   programs.hyprland.package =
     inputs.hyprland.packages."${pkgs.system}".hyprland;
   services.xserver.enable = true;
-  services.xserver.windowManager.i3.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  # services.displayManager.sddm.wayland.enable = true;
+  # services.xserver.windowManager.i3.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.defaultSession = "hyprland";
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    package = pkgs.kdePackages.sddm;
+    extraPackages = [
+      pkgs.qt6.full
+      pkgs.where-is-my-sddm-theme
+    ];
+    theme = "where_is_my_sddm_theme";
+  };
 
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   services.gnome.gnome-browser-connector.enable = true;
@@ -68,6 +78,9 @@
     dconf
     wireshark
     cudaPackages.cudatoolkit
+    libsForQt5.full
+    qt6.full
+    where-is-my-sddm-theme
   ];
 
   # nvidia config begins
