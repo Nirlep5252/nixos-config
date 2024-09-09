@@ -21,11 +21,12 @@
 
   xdg.mimeApps.enable = true;
   xdg.mimeApps.defaultApplications = {
-    "text/html" = "firefox.desktop";
-    "x-scheme-handler/http" = "firefox.desktop";
-    "x-scheme-handler/https" = "firefox.desktop";
-    "x-scheme-handler/about" = "firefox.desktop";
-    "x-scheme-handler/unknown" = "firefox.desktop";
+    "text/html" = "zen.desktop";
+    "application/pdf" = "zen.desktop";
+    "x-scheme-handler/http" = "zen.desktop";
+    "x-scheme-handler/https" = "zen.desktop";
+    "x-scheme-handler/about" = "zen.desktop";
+    "x-scheme-handler/unknown" = "zen.desktop";
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
