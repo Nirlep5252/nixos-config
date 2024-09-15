@@ -34,6 +34,8 @@
   home.file = {
     ".icons/whitesur".source =
       "${pkgs.whitesur-cursors}/share/icons/WhiteSur-cursors";
+    ".icons/macOS-BigSur".source =
+      "${pkgs.apple-cursor}/share/icons/macOS";
   };
 
   home.sessionVariables = {
@@ -55,7 +57,8 @@
   gtk.enable = true;
 
   gtk.cursorTheme.package = pkgs.apple-cursor;
-  gtk.cursorTheme.name = "macOS-BigSur";
+  gtk.cursorTheme.name = "macOS";
+  gtk.cursorTheme.size = 32;
 
   gtk.theme.package = pkgs.gnome-themes-extra;
   gtk.theme.name = "Adwaita-dark";

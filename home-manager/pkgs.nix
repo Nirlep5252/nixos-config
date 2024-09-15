@@ -4,8 +4,10 @@
   home.packages = [
     # code editors
     pkgs.vscode
+    pkgs.code-cursor
     # pkgs.neovim
     inputs.nixvim.packages."${system}".default
+    pkgs.zellij
     pkgs.neovide
     pkgs.lunarvim
 
