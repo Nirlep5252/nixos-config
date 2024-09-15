@@ -72,7 +72,12 @@
     pkgs.geist-font
     pkgs.ripgrep
     pkgs.dig
-    # pkgs.ciscoPacketTracer8
+    # (pkgs.ciscoPacketTracer8.overrideAttrs {
+    # src = pkgs.fetchurl {
+    # url = "./pkg-files/CiscoPacketTracer822_amd64_signed.deb";
+    # hash = pkgs.lib.fakeHash;
+    # };
+    # })
     pkgs.dooit
     pkgs.gtk2
     pkgs.brave
