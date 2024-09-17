@@ -12,7 +12,7 @@
     "$mod" = "SUPER";
 
     "$terminal" = "kitty";
-    "$menu" = "wofi --show run";
+    "$menu" = "fuzzel";
     "$fileManager" = "nemo";
 
     "windowrulev2" = [ "suppressevent maximize, class:.*" ];

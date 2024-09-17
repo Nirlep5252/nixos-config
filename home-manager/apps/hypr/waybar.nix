@@ -161,7 +161,7 @@
       ];
       "custom/launcher" = {
         "format" = " ";
-        "on-click" = "~/.config/rofi/launcher.sh";
+        "on-click" = "wlogout";
         "tooltip" = false;
       };
       "hyprland/workspaces" = {

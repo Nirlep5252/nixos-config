@@ -49,10 +49,7 @@
     enable = true;
     wayland.enable = true;
     package = pkgs.kdePackages.sddm;
-    extraPackages = [
-      pkgs.qt6.full
-      pkgs.where-is-my-sddm-theme
-    ];
+    extraPackages = [ pkgs.qt6.full pkgs.where-is-my-sddm-theme ];
     theme = "where_is_my_sddm_theme";
   };
 
@@ -92,7 +89,7 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    powerManagement.enable = true;
+    powerManagement.enable = false;
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;

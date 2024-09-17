@@ -9,12 +9,7 @@
 
   fonts.fontconfig.enable = true;
 
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-      firefox.enableGnomeExtensions = true;
-    };
-  };
+  nixpkgs = { config = { allowUnfree = true; }; };
 
   imports = [ ./pkgs.nix ./cli/_import.nix ./apps/_import.nix ];
   programs.firefox.enable = true;
@@ -34,8 +29,7 @@
   home.file = {
     ".icons/whitesur".source =
       "${pkgs.whitesur-cursors}/share/icons/WhiteSur-cursors";
-    ".icons/macOS-BigSur".source =
-      "${pkgs.apple-cursor}/share/icons/macOS";
+    ".icons/macOS-BigSur".source = "${pkgs.apple-cursor}/share/icons/macOS";
   };
 
   home.sessionVariables = {

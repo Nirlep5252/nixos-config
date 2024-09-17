@@ -22,6 +22,7 @@
     pkgs.yt-dlp
 
     pkgs.gammastep
+    pkgs.wlogout
     pkgs.lazygit
     pkgs.lazydocker
     pkgs.redisinsight

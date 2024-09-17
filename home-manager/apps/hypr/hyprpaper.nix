@@ -1,4 +1,7 @@
-{ ... }: {
+{ ... }:
+let image = "~/Pictures/Wallpapers/nix-Wallpaper.png";
+in
+{
   services.hyprpaper.enable = true;
   services.hyprpaper.settings = {
     ipc = "on";
@@ -6,10 +9,9 @@
     splash_offset = 2.0;
 
     preload = [
-      "~/Pictures/Wallpapers/cat.png"
-      "~/Pictures/Wallpapers/nezuko-kamado-4k.jpg"
+      image
     ];
 
-    wallpaper = [ ",~/Pictures/Wallpapers/nezuko-kamado-4k.jpg" ];
+    wallpaper = [ ",${image}" ];
   };
 }
