@@ -161,7 +161,7 @@
       ];
       "custom/launcher" = {
         "format" = " ";
-        "on-click" = "wlogout";
+        "on-click" = "fuzzel";
         "tooltip" = false;
       };
       "hyprland/workspaces" = {
@@ -241,7 +241,7 @@
       };
       "custom/powermenu" = {
         "format" = "";
-        "on-click" = "~/.config/rofi/powermenu.sh";
+        "on-click" = "wlogout";
         "tooltip" = false;
       };
       "tray" = {
