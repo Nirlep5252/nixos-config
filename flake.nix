@@ -7,6 +7,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.1";
+
+      # Optional but recommended to limit the size of your system closure.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     zen-browser.url = "github:MarceColl/zen-browser-flake";
     nixvim = {
@@ -15,12 +21,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
+  outputs = { nixpkgs, nixpkgs-stable, home-manager, lanzaboote, ... }@inputs:
     let system = "x86_64-linux";
     in {
       nixosConfigurations.uwu = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [ ./nixos/configuration.nix ];
+        modules = [
+          lanzaboote.nixosModules.lanzaboote
+          ./nixos/configuration.nix
+        ];
         specialArgs = {
           inherit inputs;
           inherit system;
