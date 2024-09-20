@@ -11,6 +11,7 @@
       initial_window_width = 1920;
       initial_window_height = 1080;
       window_padding_width = 6;
+      background_opacity = "0.8";
     };
   };
 }

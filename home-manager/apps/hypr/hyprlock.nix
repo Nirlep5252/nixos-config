@@ -6,7 +6,7 @@
 
     background = {
       monitor = "$monitor";
-      path = "~/Pictures/Wallpapers/cat.png";
+      path = "~/Pictures/Wallpapers/nix-glow-black.png";
 
       blur_passes = 3;
       blur_size = 4;
@@ -31,7 +31,7 @@
       fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
       fail_transition = 300;
 
-      position = "0, -50";
+      position = "0, 0";
       halign = "center";
       valign = "center";
     };
@@ -43,8 +43,8 @@
         text = ''cmd[update:1000] echo "$(date +"%A, %B %d")"'';
         color = "rgba(242, 243, 244, 0.75)";
         font_size = 22;
-        font_family = "Geist Mono Nerd Font";
-        position = "0, 200";
+        font_family = "GeistMono Nerd Font";
+        position = "0, 75";
         halign = "center";
         valign = "center";
       }
@@ -55,62 +55,49 @@
         text = ''cmd[update:1000] echo "$(date +"%-I:%M")"'';
         color = "rgba(242, 243, 244, 0.75)";
         font_size = 95;
-        font_family = "Geist Mono Nerd Font";
-        position = "0, 210";
+        font_family = "GeistMono Nerd Font";
+        position = "0, 150";
         halign = "center";
         valign = "center";
       }
 
-      # Formality
+      # # User
       # {
-      # monitor = "$monitor";
-      # text = "Life is all about <i>Formality</i>...";
-      # color = "rgba(200, 200, 200, 1.0)";
-      # font_size = 25;
-      # font_family = "GeistMono Nerd Font";
-
-      # position = "0, 80";
-      # halign = "center";
-      # valign = "center";
+      #   monitor = "$monitor";
+      #   text = "Hi there, $USER";
+      #   color = "white";
+      #   font_size = 14;
+      #   font_family = "Geist";
+      #   position = "0, 10";
+      #   halign = "center";
+      #   valign = "center";
       # }
 
-      # User
-      {
-        monitor = "$monitor";
-        text = "Hi there, $USER";
-        color = "white";
-        font_size = 14;
-        font_family = "GeistMono Nerd Font";
-        position = "0, 10";
-        halign = "center";
-        valign = "center";
-      }
+      # {
+      #   monitor = "$monitor";
+      #   text = "Life is all about Formality";
+      #   text_align = "center";
+      #   color = "rgba(200, 200, 200, 1.0)";
+      #   font_size = 15;
+      #   font_family = "Geist";
+      #   rotate = 0;
+      #   position = "-50, 80";
+      #   halign = "right";
+      #   valign = "bottom";
+      # }
 
-      {
-        monitor = "$monitor";
-        text = "Life is all about Formality";
-        text_align = "center";
-        color = "rgba(200, 200, 200, 1.0)";
-        font_size = 15;
-        font_family = "GeistMono Nerd Font";
-        rotate = 0;
-        position = "-50, 80";
-        halign = "right";
-        valign = "bottom";
-      }
-
-      {
-        monitor = "$monitor";
-        text = "$LAYOUT";
-        text_align = "center";
-        color = "rgba(200, 200, 200, 1.0)";
-        font_size = 15;
-        font_family = "GeistMono Nerd Font";
-        rotate = 0;
-        position = "-50, 60";
-        halign = "right";
-        valign = "bottom";
-      }
+      # {
+      #   monitor = "$monitor";
+      #   text = "$LAYOUT";
+      #   text_align = "center";
+      #   color = "rgba(200, 200, 200, 1.0)";
+      #   font_size = 15;
+      #   font_family = "GeistMono Nerd Font";
+      #   rotate = 0;
+      #   position = "-50, 60";
+      #   halign = "right";
+      #   valign = "bottom";
+      # }
     ];
   };
 }

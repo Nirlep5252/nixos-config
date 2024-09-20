@@ -15,40 +15,36 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = {
-    nixpkgs,
-    nixpkgs-stable,
-    home-manager,
-    ...
-  } @ inputs: let
-    system = "x86_64-linux";
-  in {
-    nixosConfigurations.uwu = nixpkgs.lib.nixosSystem {
-      inherit system;
-      modules = [./nixos/configuration.nix];
-      specialArgs = {
-        inherit inputs;
+  outputs = { nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
+    let system = "x86_64-linux";
+    in {
+      nixosConfigurations.uwu = nixpkgs.lib.nixosSystem {
         inherit system;
-        pkgs-stable = import nixpkgs-stable {
+        modules = [ ./nixos/configuration.nix ];
+        specialArgs = {
+          inherit inputs;
           inherit system;
-          config.allowUnfree = true;
+          pkgs-stable = import nixpkgs-stable {
+            inherit system;
+            config.allowUnfree = true;
+          };
         };
       };
-    };
-    homeConfigurations.nirlep5252 = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
-      modules = [
-        ./home-manager/home.nix
-        # inputs.nixvim.homeManagerModules.nixvim
-      ];
-      extraSpecialArgs = {
-        inherit inputs;
-        inherit system;
-        pkgs-stable = import nixpkgs-stable {
-          inherit system;
-          config.allowUnfree = true;
+      homeConfigurations.nirlep5252 =
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.${system};
+          modules = [
+            ./home-manager/home.nix
+            # inputs.nixvim.homeManagerModules.nixvim
+          ];
+          extraSpecialArgs = {
+            inherit inputs;
+            inherit system;
+            pkgs-stable = import nixpkgs-stable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          };
         };
-      };
     };
-  };
 }
