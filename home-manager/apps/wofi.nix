@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.wofi.enable = true;
+  programs.wofi.enable = false;
   programs.wofi.style = ''
 
     * {

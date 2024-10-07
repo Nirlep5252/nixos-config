@@ -11,11 +11,8 @@
     pkgs.neovide
     pkgs.lunarvim
 
-    # menus
-    pkgs.wofi
-    pkgs.rofi-wayland
-
     inputs.zen-browser.packages."${pkgs.system}".specific
+    pkgs.google-chrome
 
     pkgs.spotify
     pkgs.discord
@@ -25,8 +22,8 @@
     pkgs.wlogout
     pkgs.lazygit
     pkgs.lazydocker
-    pkgs.redisinsight
-    pkgs.grpcui
+    # pkgs.redisinsight
+    # pkgs.grpcui
     pkgs.nodejs_22
     pkgs.btop
     pkgs.exercism
@@ -46,7 +43,7 @@
     pkgs.zoxide
     pkgs.xdg-desktop-portal-hyprland
     pkgs.tree
-    pkgs.xfce.thunar
+    # pkgs.xfce.thunar
     pkgs.lxde.lxsession
     pkgs.networkmanagerapplet
     pkgs.swayimg
@@ -81,16 +78,13 @@
     # hash = pkgs.lib.fakeHash;
     # };
     # })
-    pkgs.dooit
     pkgs.gtk2
-    pkgs.brave
     pkgs.libstdcxx5
     pkgs.poetry
     pkgs.libclang
     pkgs.mpv
     pkgs.qt5.full
     pkgs.ffmpeg
-    pkgs.chatterino2
     pkgs.pandoc
     pkgs.texliveTeTeX
     pkgs.llvmPackages_latest.llvm
