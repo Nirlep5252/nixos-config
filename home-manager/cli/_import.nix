@@ -1,7 +1,7 @@
-{ ... }: {
+{
   imports = [
     ./git.nix
     ./zsh.nix
-    ./nixvim.nix
+    ./nixvim/default.nix
   ];
 }

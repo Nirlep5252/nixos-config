@@ -6,7 +6,7 @@
     pkgs.vscode
     pkgs.code-cursor
     # pkgs.neovim
-    inputs.nixvim.packages."${system}".default
+    # inputs.nixvim.packages."${system}".default
     pkgs.zellij
     pkgs.neovide
     pkgs.lunarvim

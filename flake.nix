@@ -16,8 +16,8 @@
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     zen-browser.url = "github:MarceColl/zen-browser-flake";
     nixvim = {
-      # url = "github:nix-community/nixvim";
-      url = "github:Nirlep5252/Neve";
+      url = "github:nix-community/nixvim";
+      # url = "github:Nirlep5252/Neve";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -44,7 +44,7 @@
           pkgs = nixpkgs.legacyPackages.${system};
           modules = [
             ./home-manager/home.nix
-            # inputs.nixvim.homeManagerModules.nixvim
+            inputs.nixvim.homeManagerModules.nixvim
           ];
           extraSpecialArgs = {
             inherit inputs;
