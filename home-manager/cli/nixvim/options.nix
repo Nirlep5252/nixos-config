@@ -10,5 +10,7 @@
     tabstop = 4;
 
     undofile = true;
+
+    scrolloff = 8;
   };
 }

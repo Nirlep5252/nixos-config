@@ -13,6 +13,7 @@
 
     inputs.zen-browser.packages."${pkgs.system}".specific
     pkgs.google-chrome
+    pkgs.playerctl
 
     pkgs.spotify
     pkgs.discord

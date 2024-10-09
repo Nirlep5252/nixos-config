@@ -6,7 +6,7 @@
   programs.nixvim.keymaps = [
     {
       action = "<cmd>TodoTelescope<CR>";
-      key = "<leader>tt";
+      key = "<leader>ft";
       options = {
         silent = true;
       };
