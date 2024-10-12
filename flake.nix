@@ -42,35 +42,39 @@
     };
   };
   outputs = { nixpkgs, nixpkgs-stable, home-manager, lanzaboote, ... }@inputs:
-    let system = "x86_64-linux";
+    let vars = {
+      system = "x86_64-linux";
+      hostname = "uwu";
+      username = "nirlep5252";
+    };
     in {
-      nixosConfigurations.uwu = nixpkgs.lib.nixosSystem {
-        inherit system;
+      nixosConfigurations.${vars.hostname} = nixpkgs.lib.nixosSystem {
+        system = vars.system;
         modules = [
           lanzaboote.nixosModules.lanzaboote
           ./nixos/configuration.nix
         ];
         specialArgs = {
           inherit inputs;
-          inherit system;
+          inherit vars;
           pkgs-stable = import nixpkgs-stable {
-            inherit system;
+            system = vars.system;
             config.allowUnfree = true;
           };
         };
       };
-      homeConfigurations.nirlep5252 =
+      homeConfigurations.${vars.username} =
         home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.${system};
+          pkgs = nixpkgs.legacyPackages.${vars.system};
           modules = [
             ./home-manager/home.nix
             inputs.nixvim.homeManagerModules.nixvim
           ];
           extraSpecialArgs = {
             inherit inputs;
-            inherit system;
+            inherit vars;
             pkgs-stable = import nixpkgs-stable {
-              inherit system;
+              system = vars.system;
               config.allowUnfree = true;
             };
           };

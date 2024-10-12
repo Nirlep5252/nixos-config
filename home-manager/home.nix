@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, vars, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "nirlep5252";
-  home.homeDirectory = "/home/nirlep5252";
+  home.username = vars.username;
+  home.homeDirectory = "/home/${vars.username}";
   home.stateVersion = "24.05";
 
   fonts.fontconfig.enable = true;

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, inputs, config, lib, ... }:
+{ pkgs, inputs, config, lib, vars, ... }:
 
 {
   imports = [ ./hardware-configuration.nix ./modules/_import.nix ];
@@ -21,7 +21,7 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   # Networking.
-  networking.hostName = "uwu"; # Define your hostname.
+  networking.hostName = vars.hostname; # Define your hostname.
   networking.networkmanager.enable = true;
 
   # Set your time zone.
@@ -65,11 +65,13 @@
   programs.wireshark.package = pkgs.wireshark;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.nirlep5252 = {
+  programs.zsh.enable = true;
+  users.users.${vars.username} = {
     isNormalUser = true;
     description = "Nirlep Gohil";
     extraGroups = [ "networkmanager" "wheel" "docker" "wireshark" ];
     packages = [ ];
+    shell = pkgs.zsh;
   };
 
   # Nirlep's stuff begins here ... :skull:
@@ -111,9 +113,6 @@
   # nvidia config ends
 
   security.pam.services.hyprlock = { };
-
-  programs.zsh.enable = true;
-  users.users.nirlep5252.shell = pkgs.zsh;
 
   programs.dconf.enable = true;
 
