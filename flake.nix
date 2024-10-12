@@ -9,12 +9,32 @@
     };
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.1";
-
-      # Optional but recommended to limit the size of your system closure.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Hyprland
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
+    hyprspace = {
+      url = "github:KZDKM/Hyprspace";
+      inputs.hyprland.follows = "hyprland";
+    };
+    hypr-dynamic-cursors = {
+      url = "github:VirtCode/hypr-dynamic-cursors";
+      inputs.hyprland.follows = "hyprland";
+    };
+    hy3 = {
+      url = "github:outfoxxed/hy3";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    # Zen Browser
     zen-browser.url = "github:MarceColl/zen-browser-flake";
+
+    # Nixvim
     nixvim = {
       url = "github:nix-community/nixvim";
       # url = "github:Nirlep5252/Neve";

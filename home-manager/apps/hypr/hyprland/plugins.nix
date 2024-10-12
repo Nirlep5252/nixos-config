@@ -1,10 +1,10 @@
 { pkgs, inputs, ... }: {
   wayland.windowManager.hyprland.plugins = [
-    pkgs.hyprlandPlugins.hyprtrails
-    pkgs.hyprlandPlugins.hyprspace
-    pkgs.hyprlandPlugins.hypr-dynamic-cursors
-    pkgs.hyprlandPlugins.hyprexpo
-    pkgs.hyprlandPlugins.hy3
+    inputs.hyprland-plugins.packages.${pkgs.system}.hyprtrails
+    inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+    inputs.hyprspace.packages.${pkgs.system}.Hyprspace
+    inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+    inputs.hy3.packages.${pkgs.system}.hy3
   ];
 
   wayland.windowManager.hyprland.settings.plugin = {
