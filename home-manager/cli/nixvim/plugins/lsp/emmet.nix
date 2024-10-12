@@ -1,5 +1,5 @@
 {
-  programs.nixvim.plugins.lsp.servers.emmet-ls = {
+  programs.nixvim.plugins.lsp.servers.emmet_ls = {
     enable = true;
   };
 }

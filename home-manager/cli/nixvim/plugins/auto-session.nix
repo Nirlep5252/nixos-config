@@ -2,12 +2,11 @@
   programs.nixvim.plugins.lastplace.enable = true;
   programs.nixvim.plugins.auto-session = {
     enable = true;
-    autoRestore.enabled = true;
-    autoSave.enabled = true;
-    autoSession = {
-      # enableLastSession = true;
-      createEnabled = true;
-      useGitBranch = true;
+    settings = {
+      auto_create = true;
+      use_git_branch = true;
+      auto_restore = true;
+      auto_save = true;
     };
   };
 

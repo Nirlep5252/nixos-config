@@ -4,6 +4,7 @@
 
     number = true;
     relativenumber = true;
+    cursorline = true;
 
     expandtab = true;
     shiftwidth = 4;
