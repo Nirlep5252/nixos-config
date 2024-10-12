@@ -10,6 +10,7 @@
     pkgs.zellij
     pkgs.neovide
     pkgs.lunarvim
+    pkgs.eza
 
     inputs.zen-browser.packages."${pkgs.system}".specific
     pkgs.google-chrome

@@ -1,5 +1,5 @@
 { ... }:
-let image = "~/Pictures/Wallpapers/nix-Wallpaper.png";
+let image = "~/Pictures/Wallpapers/wallhaven-gpgyw3.jpg";
 in
 {
   services.hyprpaper.enable = true;

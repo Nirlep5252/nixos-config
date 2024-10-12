@@ -14,6 +14,7 @@
     shellAliases = let flakePath = "~/nix";
     in {
       cd = "z";
+      ls = "eza";
       rebuild = "sudo nixos-rebuild switch --flake ${flakePath}";
       hms = "home-manager switch --flake ${flakePath}";
       n = "nvim";

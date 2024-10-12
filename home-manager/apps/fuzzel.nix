@@ -13,7 +13,7 @@
       inner-pad = 6;
       filter-desktop = true;
       image-size-ratio = 0.5;
-      terminal = "foot -e";
+      terminal = "kitty";
       fields = "name,exec,filename";
       placeholder = "Search...";
       sort-result = false;

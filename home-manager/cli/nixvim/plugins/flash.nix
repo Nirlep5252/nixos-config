@@ -6,7 +6,7 @@
   programs.nixvim.keymaps = [
     {
       action = "<cmd>lua require(\"flash\").jump()<CR>";
-      key = "/";
+      key = "\\";
       options = {
         silent = true;
         remap = true;

@@ -53,6 +53,7 @@
         modules = [
           lanzaboote.nixosModules.lanzaboote
           ./nixos/configuration.nix
+          inputs.home-manager.nixosModules.default
         ];
         specialArgs = {
           inherit inputs;
