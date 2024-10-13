@@ -1,8 +1,6 @@
 { pkgs, vars, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = vars.username;
   home.homeDirectory = "/home/${vars.username}";
   home.stateVersion = "24.05";
@@ -15,14 +13,26 @@
   programs.firefox.enable = true;
 
   xdg.mimeApps.enable = true;
-  xdg.mimeApps.defaultApplications = {
-    "text/html" = "zen.desktop";
-    "application/pdf" = "zen.desktop";
-    "x-scheme-handler/http" = "zen.desktop";
-    "x-scheme-handler/https" = "zen.desktop";
-    "x-scheme-handler/about" = "zen.desktop";
-    "x-scheme-handler/unknown" = "zen.desktop";
-  };
+  xdg.mimeApps.defaultApplications =
+    let
+      browser = "zen.desktop";
+      image-viewer = "imv-dir.desktop";
+    in
+      {
+
+      # Browser
+      "text/html" = browser;
+      "application/pdf" = browser;
+      "x-scheme-handler/http" = browser;
+      "x-scheme-handler/https" = browser;
+      "x-scheme-handler/about" = browser;
+      "x-scheme-handler/unknown" = browser;
+
+      # Image viewer
+      "image/png" = image-viewer;
+      "image/jpeg" = image-viewer;
+
+    };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -36,10 +46,6 @@
     EDITOR = "nvim";
     BROWSER = "firefox";
     NIXOS_OZONE_WL = "1";
-
-    # PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
-    # PRISMA_QUERY_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/query-engine";
-    # PRISMA_SCHEMA_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/schema-engine";
   };
 
   home.sessionPath = [ "$HOME/.local/bin" ];
@@ -54,8 +60,8 @@
   gtk.cursorTheme.name = "macOS";
   gtk.cursorTheme.size = 32;
 
-  gtk.theme.package = pkgs.gnome-themes-extra;
-  gtk.theme.name = "Adwaita-dark";
+  gtk.theme.package = pkgs.catppuccin-gtk;
+  gtk.theme.name = "catppuccin-frappe-blue-standard";
 
   gtk.iconTheme.package = pkgs.whitesur-icon-theme;
   gtk.iconTheme.name = "WhiteSur";

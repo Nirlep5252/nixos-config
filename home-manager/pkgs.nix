@@ -12,6 +12,9 @@
     pkgs.lunarvim
     pkgs.eza
 
+    # TODO: use this for theming stuff
+    pkgs.catppuccin
+
     inputs.zen-browser.packages."${pkgs.system}".specific
     pkgs.google-chrome
     pkgs.playerctl

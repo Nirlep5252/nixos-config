@@ -13,5 +13,6 @@
       window_padding_width = 6;
       background_opacity = "0.8";
     };
+    themeFile = "Catppuccin-Mocha";
   };
 }
