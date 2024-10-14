@@ -1,1 +1,8 @@
-{ imports = [ ./audio.nix ./docker.nix ]; }
+{
+  imports = [
+    ./boot.nix
+    ./nvidia.nix
+    ./audio.nix
+    ./docker.nix
+  ];
+}

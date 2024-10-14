@@ -5,20 +5,13 @@
 { pkgs, inputs, config, lib, vars, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ./modules/_import.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ./modules/_import.nix
+  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
-
-  # Bootloader.
-  # boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.enable = lib.mkForce false;
-  boot.lanzaboote = {
-    enable = true;
-    pkiBundle = "/etc/secureboot";
-  };
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.supportedFilesystems = [ "ntfs" ];
 
   # Networking.
   networking.hostName = vars.hostname; # Define your hostname.
@@ -87,30 +80,6 @@
     where-is-my-sddm-theme
     sbctl
   ];
-
-  # nvidia config begins
-
-  hardware.graphics.enable = true;
-  hardware.graphics.enable32Bit = true;
-
-  services.xserver.videoDrivers = [ "nvidia" ];
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-
-    prime = {
-      sync.enable = true;
-      nvidiaBusId = "PCI:1:0:0";
-      amdgpuBusId = "PCI:5:0:0";
-    };
-  };
-
-  # nvidia config ends
 
   security.pam.services.hyprlock = { };
 

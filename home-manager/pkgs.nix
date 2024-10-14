@@ -5,8 +5,6 @@
     # code editors
     pkgs.vscode
     pkgs.code-cursor
-    # pkgs.neovim
-    # inputs.nixvim.packages."${system}".default
     pkgs.zellij
     pkgs.neovide
     pkgs.lunarvim
@@ -14,6 +12,7 @@
 
     # TODO: use this for theming stuff
     pkgs.catppuccin
+    pkgs.catppuccinifier-cli
 
     inputs.zen-browser.packages."${pkgs.system}".specific
     pkgs.google-chrome
@@ -77,12 +76,6 @@
     pkgs.geist-font
     pkgs.ripgrep
     pkgs.dig
-    # (pkgs.ciscoPacketTracer8.overrideAttrs {
-    # src = pkgs.fetchurl {
-    # url = "./pkg-files/CiscoPacketTracer822_amd64_signed.deb";
-    # hash = pkgs.lib.fakeHash;
-    # };
-    # })
     pkgs.gtk2
     pkgs.libstdcxx5
     pkgs.poetry
