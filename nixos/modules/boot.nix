@@ -22,7 +22,7 @@
     initrd.verbose = false;
     kernelParams = [
       "quiet"
-      "udev.log_priority=0"
+      "udev.log_level=0"
     ];
     loader.timeout = 10;
   };
