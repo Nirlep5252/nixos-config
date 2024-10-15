@@ -1,6 +1,6 @@
 {
   programs.nixvim.plugins.lsp.servers.ts_ls = {
-    enable = true;
+    enable = false;
   };
 
   programs.nixvim.plugins.typescript-tools = {
