@@ -5,10 +5,10 @@
     # code editors
     pkgs.vscode
     pkgs.code-cursor
-    pkgs.zellij
     pkgs.neovide
     pkgs.lunarvim
     pkgs.eza
+    pkgs.skim
 
     # TODO: use this for theming stuff
     pkgs.catppuccin
