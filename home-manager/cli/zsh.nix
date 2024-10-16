@@ -23,7 +23,8 @@
 
     initExtra = ''
       eval "$(zoxide init zsh)";
-      pfetch;
+      fastfetch;
+      echo "";
     '';
   };
 }
