@@ -51,7 +51,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    BROWSER = "firefox";
+    BROWSER = "zen";
     NIXOS_OZONE_WL = "1";
   };
 
