@@ -40,6 +40,13 @@
     ".icons/whitesur".source =
       "${pkgs.whitesur-cursors}/share/icons/WhiteSur-cursors";
     ".icons/macOS-BigSur".source = "${pkgs.apple-cursor}/share/icons/macOS";
+
+    # scripts
+    ".local/bin" = {
+      source = ../scripts;
+      recursive = true;
+      executable = true;
+    };
   };
 
   home.sessionVariables = {
