@@ -3,10 +3,10 @@
 {
   home.packages = [
     # code editors
-    pkgs.vscode
-    pkgs.code-cursor
+    # pkgs.vscode
+    # pkgs.code-cursor
     pkgs.neovide
-    pkgs.lunarvim
+    # pkgs.lunarvim
     pkgs.eza
     pkgs.skim
 
@@ -33,7 +33,7 @@
     pkgs.exercism
     pkgs.nixfmt-classic
     pkgs.pfetch-rs
-    pkgs.ungoogled-chromium
+    # pkgs.ungoogled-chromium
     pkgs.dconf
     pkgs.gcc
     pkgs.fastfetch
@@ -69,9 +69,8 @@
     pkgs.luajitPackages.luarocks
     pkgs.tesseract
     pkgs.sway-contrib.grimshot
-    pkgs.zed-editor
+    # pkgs.zed-editor
     pkgs.xdg-utils
-    pkgs.rose-pine-cursor
     pkgs.libsForQt5.qt5.qtwayland
     pkgs.geist-font
     pkgs.ripgrep
@@ -92,7 +91,6 @@
 
     pkgs.rustup
 
-    pkgs.flyctl
     pkgs.dust
     pkgs.nvidia-container-toolkit
 

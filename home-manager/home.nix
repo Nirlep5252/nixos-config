@@ -9,7 +9,7 @@
 
   nixpkgs = { config = { allowUnfree = true; }; };
 
-  imports = [ ./pkgs.nix ./cli/_import.nix ./apps/_import.nix ];
+  imports = [ ./pkgs.nix ./cli/default.nix ./apps/default.nix ];
   programs.firefox.enable = true;
 
   xdg.mimeApps.enable = true;

@@ -8,7 +8,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" ];
-      theme = "robbyrussell";
+      # theme = "robbyrussell";
     };
 
     shellAliases = let flakePath = "~/nix";
@@ -27,4 +27,8 @@
       echo "";
     '';
   };
+
+  imports = [
+    ./starship.nix
+  ];
 }
