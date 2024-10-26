@@ -9,6 +9,7 @@
     # pkgs.lunarvim
     pkgs.eza
     pkgs.skim
+    pkgs.postman
 
     # TODO: use this for theming stuff
     pkgs.catppuccin
@@ -50,7 +51,7 @@
     # pkgs.xfce.thunar
     pkgs.lxde.lxsession
     pkgs.networkmanagerapplet
-    pkgs.swayimg
+    # pkgs.swayimg
     pkgs.gnumake
     pkgs.cmake
     pkgs.ninja
@@ -66,8 +67,6 @@
     pkgs.nemo
     pkgs.whitesur-cursors
     pkgs.apple-cursor
-    pkgs.luajitPackages.luarocks
-    pkgs.tesseract
     pkgs.sway-contrib.grimshot
     # pkgs.zed-editor
     pkgs.xdg-utils
@@ -77,7 +76,6 @@
     pkgs.dig
     pkgs.gtk2
     pkgs.libstdcxx5
-    pkgs.poetry
     pkgs.libclang
     pkgs.mpv
     pkgs.qt5.full
@@ -97,6 +95,6 @@
     pkgs.python3
     pkgs.pkg-config
 
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "GeistMono" ]; })
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "GeistMono" "Iosevka" "Recursive" ]; })
   ];
 }
