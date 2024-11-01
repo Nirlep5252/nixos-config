@@ -3,7 +3,7 @@
     inputs.hyprland-plugins.packages.${pkgs.system}.hyprtrails
     inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
     inputs.hyprspace.packages.${pkgs.system}.Hyprspace
-    inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+    # inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
     inputs.hy3.packages.${pkgs.system}.hy3
   ];
 

@@ -3,13 +3,15 @@
 {
   home.packages = [
     # code editors
-    # pkgs.vscode
+    pkgs.vscode
     # pkgs.code-cursor
     pkgs.neovide
     # pkgs.lunarvim
     pkgs.eza
     pkgs.skim
     pkgs.postman
+
+    pkgs.tor-browser
 
     # TODO: use this for theming stuff
     pkgs.catppuccin
