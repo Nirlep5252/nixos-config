@@ -17,6 +17,9 @@
     pkgs.catppuccin
     pkgs.catppuccinifier-cli
 
+    # emoji picker
+    pkgs.bemoji
+
     inputs.zen-browser.packages."${pkgs.system}".specific
     pkgs.google-chrome
     pkgs.playerctl

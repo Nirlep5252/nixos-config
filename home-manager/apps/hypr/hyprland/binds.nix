@@ -34,6 +34,9 @@
       $mod SHIFT, S, exec, grimshot savecopy area "/home/nirlep5252/Pictures/Screenshots/$(date).png"''
     # "$mod, Tab, workspace, previous"
 
+    # Emoji picker
+    "$mod, b, exec, bemoji"
+
     "$mod, Tab, overview:toggle" # REQUIRES Hyprspace PLUGIN
     "$mod, Escape, hyprexpo:expo, toggle" # REQUIRES hyprexpo PLUGIN
     "$mod, M, exit"
