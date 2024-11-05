@@ -7,6 +7,7 @@
     daemon.settings = {
       runtimes.nvidia.path =
         "${pkgs.nvidia-docker}/bin/nvidia-container-runtime";
+      deprecatedCgroupv1 = true;
     };
   };
   virtualisation.docker.extraPackages =
