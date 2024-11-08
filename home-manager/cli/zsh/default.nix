@@ -8,7 +8,6 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" ];
-      # theme = "robbyrussell";
     };
 
     shellAliases = let flakePath = "~/nix";

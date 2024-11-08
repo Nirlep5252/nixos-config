@@ -10,6 +10,8 @@
     ./emmet.nix
     ./eslint.nix
     ./html.nix
+    ./nil_ls.nix
+    ./python.nix
     ./ruff.nix
     ./rust.nix
     ./tailwind.nix

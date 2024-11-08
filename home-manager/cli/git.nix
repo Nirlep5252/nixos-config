@@ -4,4 +4,7 @@
     userName = vars.username;
     userEmail = "hello@nirlep.dev";
   };
+  programs.gh = {
+    enable = true;
+  };
 }
