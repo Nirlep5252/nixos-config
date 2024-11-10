@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, inputs, config, lib, vars, ... }:
+{ pkgs, inputs, vars, ... }:
 
 {
   imports = [
@@ -39,7 +39,7 @@
   programs.hyprland.package =
     inputs.hyprland.packages."${pkgs.system}".hyprland;
   services.xserver.enable = true;
-  # services.xserver.windowManager.i3.enable = true;
+  services.xserver.windowManager.i3.enable = true;
   # services.xserver.displayManager.gdm.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
   services.displayManager.defaultSession = "hyprland";
