@@ -12,7 +12,7 @@
       natural_scroll = "yes";
     };
 
-    sensitivity = -0.2; # -1.0 - 1.0, 0 means no modification.
+    sensitivity = 0.0; # -1.0 - 1.0, 0 means no modification.
     accel_profile = "flat";
     numlock_by_default = "yes";
   };

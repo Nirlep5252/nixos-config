@@ -1,0 +1,5 @@
+{
+  imports = [
+    ./screen-locker.nix
+  ];
+}

@@ -11,6 +11,8 @@
     pkgs.skim
     pkgs.postman
 
+    pkgs.obsidian
+
     pkgs.tor-browser
 
     # TODO: use this for theming stuff
@@ -28,8 +30,11 @@
     pkgs.discord
     pkgs.yt-dlp
 
+    pkgs.feh
+    pkgs.nitrogen
     pkgs.gammastep
     pkgs.wlogout
+    pkgs.i3lock-color
     pkgs.lazygit
     pkgs.lazydocker
     # pkgs.redisinsight
@@ -85,14 +90,12 @@
     pkgs.mpv
     pkgs.qt5.full
     pkgs.ffmpeg
-    pkgs.pandoc
-    pkgs.texliveTeTeX
+    # pkgs.pandoc
+    # pkgs.texliveTeTeX
     pkgs.llvmPackages_latest.llvm
 
     pkgs.lld
     pkgs.cppcheck
-
-    pkgs.rustup
 
     pkgs.dust
     pkgs.nvidia-container-toolkit
