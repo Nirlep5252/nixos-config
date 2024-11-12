@@ -1,7 +1,5 @@
 {
-  programs.nixvim.plugins.lsp = {
-    enable = true;
-  };
+  programs.nixvim.plugins.lsp = { enable = true; };
 
   imports = [
     ./clangd.nix
@@ -22,7 +20,7 @@
 
     ./lsp-format.nix
     ./lsp-lines.nix
-    ./lsp-signature.nix
+    # ./lsp-signature.nix
     ./lspkind.nix
     ./lspsaga.nix
   ];

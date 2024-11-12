@@ -3,8 +3,10 @@
   programs.nixvim.plugins.intellitab.enable = true;
 
   imports = [
-    ./ai/default.nix
+    ./ui/default.nix
     ./lsp/default.nix
+    ./git/default.nix
+    ./ai/default.nix
 
     ./auto-session.nix
     ./autoclose.nix
@@ -12,19 +14,16 @@
     ./bufdelete.nix
     ./bufferline.nix
     ./comment.nix
-    ./dashboard.nix
-    ./dressing.nix
+    ./conform.nix
     ./flash.nix
     ./fugitive.nix
-    ./gitsigns.nix
     ./guess-indent.nix
     ./hex.nix
     ./illuminate.nix
-    ./indent-blankline.nix
     ./lazygit.nix
-    ./lualine.nix
     ./nix.nix
-    ./nvim-tree.nix
+    ./neo-tree.nix
+    # ./nvim-tree.nix
     ./oil.nix
     ./telescope.nix
     ./todo-comments.nix

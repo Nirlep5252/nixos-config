@@ -3,7 +3,7 @@
     enable = true;
     config = {
       modifier = "Mod4";
-      colors = {};
+      colors = { };
       fonts = {
         names = [ "GeistMono Nerd Font" ];
         size = 11.0;

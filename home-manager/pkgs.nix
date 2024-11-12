@@ -27,7 +27,8 @@
     pkgs.playerctl
 
     pkgs.spotify
-    pkgs.discord
+    # pkgs.discord
+    pkgs.vesktop
     pkgs.yt-dlp
 
     pkgs.feh
@@ -73,6 +74,7 @@
     pkgs.hwdata
     pkgs.hyprcursor
     pkgs.bun
+    pkgs.prettierd
     pkgs.openssl
     pkgs.nemo
     pkgs.whitesur-cursors
@@ -103,6 +105,8 @@
     pkgs.python3
     pkgs.pkg-config
 
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "GeistMono" "Iosevka" "Recursive" ]; })
+    (pkgs.nerdfonts.override {
+      fonts = [ "FiraCode" "GeistMono" "Iosevka" "Recursive" ];
+    })
   ];
 }

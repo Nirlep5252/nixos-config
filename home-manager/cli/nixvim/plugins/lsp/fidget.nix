@@ -1,5 +1,1 @@
-{
-  programs.nixvim.plugins.fidget = {
-    enable = true;
-  };
-}
+{ programs.nixvim.plugins.fidget = { enable = true; }; }
