@@ -12,9 +12,5 @@
     active_opacity = 0.95;
     inactive_opacity = 0.85;
     fullscreen_opacity = 1.0;
-    drop_shadow = "no";
-    shadow_range = 4;
-    shadow_render_power = 3;
-    "col.shadow" = "rgba(1a1a1aee)";
   };
 }
