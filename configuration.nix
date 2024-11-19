@@ -5,10 +5,7 @@
 { pkgs, inputs, vars, ... }:
 
 {
-  imports = [
-    ./hardware-configuration.nix
-    ./modules/default.nix
-  ];
+  imports = [ ./hardware-configuration.nix ./modules/default.nix ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
@@ -51,9 +48,6 @@
     theme = "where_is_my_sddm_theme";
   };
 
-  # services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
-  # services.gnome.gnome-browser-connector.enable = true;
-
   programs.wireshark.enable = true;
   programs.wireshark.package = pkgs.wireshark;
 
@@ -67,7 +61,6 @@
     shell = pkgs.zsh;
   };
 
-  # Nirlep's stuff begins here ... :skull:
   environment.systemPackages = with pkgs; [
     vim
     wget

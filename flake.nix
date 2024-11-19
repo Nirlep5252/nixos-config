@@ -42,17 +42,18 @@
     };
   };
   outputs = { nixpkgs, nixpkgs-stable, home-manager, lanzaboote, ... }@inputs:
-    let vars = {
-      system = "x86_64-linux";
-      hostname = "uwu";
-      username = "nirlep5252";
-    };
+    let
+      vars = {
+        system = "x86_64-linux";
+        hostname = "uwu";
+        username = "nirlep5252";
+      };
     in {
       nixosConfigurations.${vars.hostname} = nixpkgs.lib.nixosSystem {
         system = vars.system;
         modules = [
           lanzaboote.nixosModules.lanzaboote
-          ./nixos/configuration.nix
+          ./configuration.nix
           inputs.home-manager.nixosModules.default
         ];
         specialArgs = {
@@ -67,10 +68,7 @@
       homeConfigurations.${vars.username} =
         home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.${vars.system};
-          modules = [
-            ./home-manager/home.nix
-            inputs.nixvim.homeManagerModules.nixvim
-          ];
+          modules = [ ./home/home.nix inputs.nixvim.homeManagerModules.nixvim ];
           extraSpecialArgs = {
             inherit inputs;
             inherit vars;

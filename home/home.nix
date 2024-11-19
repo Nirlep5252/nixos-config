@@ -13,26 +13,24 @@
   programs.firefox.enable = true;
 
   xdg.mimeApps.enable = true;
-  xdg.mimeApps.defaultApplications =
-    let
-      browser = "zen.desktop";
-      image-viewer = "imv-dir.desktop";
-    in
-      {
+  xdg.mimeApps.defaultApplications = let
+    browser = "zen.desktop";
+    image-viewer = "imv-dir.desktop";
+  in {
 
-      # Browser
-      "text/html" = browser;
-      "application/pdf" = browser;
-      "x-scheme-handler/http" = browser;
-      "x-scheme-handler/https" = browser;
-      "x-scheme-handler/about" = browser;
-      "x-scheme-handler/unknown" = browser;
+    # Browser
+    "text/html" = browser;
+    "application/pdf" = browser;
+    "x-scheme-handler/http" = browser;
+    "x-scheme-handler/https" = browser;
+    "x-scheme-handler/about" = browser;
+    "x-scheme-handler/unknown" = browser;
 
-      # Image viewer
-      "image/png" = image-viewer;
-      "image/jpeg" = image-viewer;
+    # Image viewer
+    "image/png" = image-viewer;
+    "image/jpeg" = image-viewer;
 
-    };
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
