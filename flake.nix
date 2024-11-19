@@ -32,14 +32,12 @@
     };
 
     # Zen Browser
+    # WARN: remove this later
     zen-browser.url = "github:ch4og/zen-browser-flake";
 
-    # Nixvim
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      # url = "github:Nirlep5252/Neve";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # Very epic neovim configuration btw...
+    # WARN: if you are using my config, then you should "main" branch rather than "dev"
+    epicvim = { url = "github:nirlep5252/epicvim/dev"; };
   };
   outputs = { nixpkgs, nixpkgs-stable, home-manager, lanzaboote, ... }@inputs:
     let
@@ -68,7 +66,7 @@
       homeConfigurations.${vars.username} =
         home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.${vars.system};
-          modules = [ ./home/home.nix inputs.nixvim.homeManagerModules.nixvim ];
+          modules = [ ./home/home.nix ];
           extraSpecialArgs = {
             inherit inputs;
             inherit vars;

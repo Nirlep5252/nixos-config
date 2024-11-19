@@ -15,6 +15,8 @@
 
     pkgs.tor-browser
 
+    inputs.epicvim.packages."${pkgs.system}".default
+
     # TODO: use this for theming stuff
     pkgs.catppuccin
     pkgs.catppuccinifier-cli
