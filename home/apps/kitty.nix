@@ -12,6 +12,7 @@
       initial_window_height = 1080;
       window_padding_width = 6;
       background_opacity = "0.8";
+      cursor_trail = 10;
     };
     themeFile = "Catppuccin-Mocha";
   };
