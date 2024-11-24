@@ -2,7 +2,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "GeistMono Nerd Font";
+      name = "Maple Mono NF";
       size = 12;
     };
     shellIntegration.enableZshIntegration = true;

@@ -4,9 +4,9 @@
   home.packages = [
     # code editors
     pkgs.vscode
+    inputs.epicvim.packages."${pkgs.system}".default
     # pkgs.code-cursor
     pkgs.neovide
-    # pkgs.lunarvim
     pkgs.eza
     pkgs.skim
     pkgs.postman
@@ -14,8 +14,6 @@
     pkgs.obsidian
 
     pkgs.tor-browser
-
-    inputs.epicvim.packages."${pkgs.system}".default
 
     # TODO: use this for theming stuff
     pkgs.catppuccin
@@ -94,21 +92,21 @@
     pkgs.mpv
     pkgs.qt5.full
     pkgs.ffmpeg
-    # pkgs.pandoc
-    # pkgs.texliveTeTeX
     pkgs.llvmPackages_latest.llvm
-
     pkgs.lld
     pkgs.cppcheck
-
     pkgs.dust
     pkgs.nvidia-container-toolkit
-
-    pkgs.python3
     pkgs.pkg-config
 
+    # Programming Languages
+    pkgs.python3
+    pkgs.go
+
+    # Fonts
     (pkgs.nerdfonts.override {
       fonts = [ "FiraCode" "GeistMono" "Iosevka" "Recursive" ];
     })
+    pkgs.maple-mono-NF
   ];
 }
