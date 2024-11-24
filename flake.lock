@@ -83,11 +83,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1732175027,
-        "narHash": "sha256-C67pWTP/Sc+/LUP5qfUSKGvYDfD5bNdQEMYSomOcmDk=",
+        "lastModified": 1732459249,
+        "narHash": "sha256-yWdCS6HSdNIsN3jMLjPWbvhfA9FbW7ygODIlZNk1j2w=",
         "owner": "nirlep5252",
         "repo": "epicvim",
-        "rev": "89e720556b867890b8c54de0e79ab6268c060071",
+        "rev": "afb1ede61c9af007d9888912b4a43ae203646188",
         "type": "github"
       },
       "original": {
