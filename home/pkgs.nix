@@ -3,10 +3,7 @@
 {
   home.packages = [
     # code editors
-    pkgs.vscode
     inputs.epicvim.packages."${pkgs.system}".default
-    # pkgs.code-cursor
-    pkgs.neovide
     pkgs.eza
     pkgs.skim
     pkgs.postman
